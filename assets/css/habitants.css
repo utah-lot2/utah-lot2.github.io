@@ -1,0 +1,14 @@
+#tooltip
+{
+  width: 200px;
+  position: absolute;
+  display:none;
+  border: 1px solid blue;
+  text-align: center;
+  background-color: white;
+}
+
+span
+{
+  
+}  

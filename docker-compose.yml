@@ -1,0 +1,18 @@
+# Usage
+# docker-compose run --service-ports site jekyll s
+# docker-compose run site jekyll new site
+# docker-compose run site bundle update
+# docker-compose run site jekyll b
+
+version: "2"
+
+services:
+  site:
+    command: jekyll serve
+    image: jekyll/jekyll:latest
+    volumes:
+      - $PWD:/srv/jekyll
+      - $PWD/vendor/bundle:/usr/local/bundle
+    ports:
+    - 4000:4000
+    - 37529:37529
