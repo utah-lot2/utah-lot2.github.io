@@ -5,7 +5,6 @@ var app = new Vue({
       posts: []    
     },
     created: function() {
-        console.log("Getting blog");
         var that = this;
         $.ajax({
             type: 'GET',
@@ -13,20 +12,8 @@ var app = new Vue({
             async: false,
             contentType: "application/json",
             dataType: 'jsonp',
-            success: function(json) {
-                console.log(json);
-                /*
-                var latest = json.response.posts[0];
-                $("#blog-headline").text(latest.title);
-                $("#blog-body").html(latest.body);
-                */
+            success: function(json) {                
                 that.posts = json.response.posts;
-                /*
-                json.response.posts.forEach(function(el, i) {
-                    if(i > 4) return false;
-                    $("#blog-more").append("<li><a href='"+ el.post_url +"'>"+ el.title +"</li>");
-                });
-                 */
             },
             error: function(e) {
                 console.log(e.message);
