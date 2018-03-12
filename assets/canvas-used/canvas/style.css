@@ -309,7 +309,7 @@ span.middot {
 
 .rightmargin { margin-right: 50px !important; }
 
-.topmargin { margin-top: 50px !important; }
+.topmargin { margin-top: 10px !important; }
 
 .bottommargin { margin-bottom: 50px !important; }
 
@@ -3536,7 +3536,7 @@ body.stretched .container-fullwidth .breadcrumb { right: 60px !important; }
 
 .content-wrap {
 	position: relative;
-	padding: 80px 0;
+	/*padding: 80px 0;*/
 }
 
 #content .container { position: relative; }
@@ -11127,7 +11127,7 @@ input[type=checkbox]:not(:checked) + label.error { display: block !important; }
 /* Heading Block - with Subtitle
 -----------------------------------------------------------------*/
 
-.heading-block { margin-bottom: 50px; }
+.heading-block { margin-bottom: 0px; }
 
 .heading-block h1,
 .heading-block h2,
