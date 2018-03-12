@@ -1,0 +1,18 @@
+---
+layout: normal-page
+title: Articles
+permalink: /blog
+custom_js:
+- https://cdn.jsdelivr.net/npm/vue
+- /assets/js/blog.js
+---
+<div id="blogapp">
+    {% raw %}
+    {{ message }}
+    <ul id="example-1">
+        <li v-for="post in posts">
+            {{ post.type }} / {{post.title}}
+        </li>
+    </ul>    
+    {% endraw %}
+</div>
