@@ -17,7 +17,7 @@ var app = new Vue({
         var postId = this.getUrlParameter("id");
         $.ajax({
             type: 'GET',
-            url: "https://api.tumblr.com/v2/blog/utah-lot2.tumblr.com/posts?api_key=ekDkwXEZzdxqJNwEtwW64qRtmJW0LQjmgc7BI10W9w0Ywlo1qy&id="+postId,
+            url: "https://api.tumblr.com/v2/blog/utah-lot2.tumblr.com/posts?api_key=ekDkwXEZzdxqJNwEtwW64qRtmJW0LQjmgc7BI10W9w0Ywlo1qy&notes_info=true&id="+postId,
             async: false,
             contentType: "application/json",
             dataType: 'jsonp',

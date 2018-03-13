@@ -55,9 +55,11 @@
 					<div class="row clearfix">
 
 						<div class="col-xl-12">
+							{% unless page.no_title%}
 							<div class="heading-block topmargin">
 								<h1>{{ page.title | escape }}</h1>
 							</div>
+							{% endunless %}
 							<p class="lead">
 								{{ content }}
                             </p>
