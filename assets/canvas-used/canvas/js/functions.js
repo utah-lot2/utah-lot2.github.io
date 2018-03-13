@@ -2209,7 +2209,8 @@ var SEMICOLON = SEMICOLON || {};
 							SEMICOLON.widget.animations();
 							SEMICOLON.initialize.verticalMiddle();
 							slider.parent().removeClass('preloader2');
-							var t = setTimeout( function(){ $('.grid-container').isotope('layout'); }, 1200 );
+							//TDE Give errors on blog overview page, maybe because of Vue
+							//var t = setTimeout( function(){ $('.grid-container').isotope('layout'); }, 1200 );
 							SEMICOLON.initialize.lightbox();
 							$('.flex-prev').html('<i class="icon-angle-left"></i>');
 							$('.flex-next').html('<i class="icon-angle-right"></i>');
