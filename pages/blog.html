@@ -25,17 +25,17 @@ custom_js:
             </div>
             <div v-if="post.type == 'photo'">
                     <div class="entry-image" v-if="post.photos.length == 1">
-                            <a v-bind:href="post.photos[0].alt_sizes[0].url" data-lightbox="image"><img class="image_fade" v-bind:src="post.photos[0].alt_sizes[0].url"></a>
+                        <a v-bind:href="post.photos[0].alt_sizes[0].url" data-lightbox="image"><img class="image_fade" v-bind:src="post.photos[0].alt_sizes[3].url"></a>
                     </div>                
                     <div class="entry-image clearfix" v-if="post.photos.length > 1">
-                            <div class="fslider" data-animation="fade" data-pagi="false" data-pause="6000" data-lightbox="gallery">
-                                <div class="flexslider">
-                                    <div class="slider-wrap">
-                                        <div class="slide" v-for="photo in post.photos"><a v-bind:href="photo.alt_sizes[0].url" data-lightbox="gallery-item"><img class="image_fade"  v-bind:src="photo.alt_sizes[0].url"></a></div>
-                                    </div>
+                        <div class="fslider" data-animation="fade" data-pagi="false" data-pause="6000" data-lightbox="gallery">
+                            <div class="flexslider">
+                                <div class="slider-wrap">
+                                    <div class="slide" v-for="photo in post.photos"><a v-bind:href="photo.alt_sizes[0].url" data-lightbox="gallery-item"><img class="image_fade"  v-bind:src="photo.alt_sizes[3].url"></a></div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 
                     <ul class="entry-meta clearfix">
                         <li><i class="icon-calendar3"></i> {{post.date}}</li>
