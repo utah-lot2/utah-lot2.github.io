@@ -1,0 +1,34 @@
+<img src="lot2_gmaps_edit.xcf" width="1249" height="922" border="0" usemap="#map" />
+
+<map name="map">
+<!-- #$-:Image map file created by GIMP Image Map plug-in -->
+<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+<!-- #$-:Please do not edit lines starting with "#$" -->
+<!-- #$VERSION:2.3 -->
+<!-- #$AUTHOR:Thomas Dekeyser  -->
+<area shape="poly" coords="188,37,165,218,251,225,267,45" alt="Allée Chatas 11" href="11" />
+<area shape="poly" coords="160,228,138,413,243,424,248,233" onmouseover="showHabitant(11)"  nohref="nohref" />
+<area shape="poly" coords="277,30,260,227,439,241,447,35" href="13" />
+<area shape="poly" coords="252,234,247,424,322,431,335,239,293,238" href="14" />
+<area shape="poly" coords="453,37,446,241,528,246,546,37" href="15" />
+<area shape="poly" coords="343,241,333,433,506,450,523,255" href="16" />
+<area shape="poly" coords="556,39,537,248,623,259,642,38" href="17" />
+<area shape="poly" coords="532,258,515,452,602,462,618,265" href="18" />
+<area shape="poly" coords="649,39,631,260,816,277,838,44" href="19" />
+<area shape="poly" coords="628,267,610,460,702,467,713,273" href="20" />
+<area shape="poly" coords="720,274,710,467,800,474,812,322,785,282,750,279" href="21" />
+<area shape="poly" coords="873,45,857,283,1034,304,1057,51" href="22" />
+<area shape="poly" coords="849,293,839,409,1019,433,1030,312" href="25" />
+<area shape="poly" coords="828,421,1019,441,1000,623,821,500,822,504" href="26" />
+<area shape="poly" coords="606,465,803,476,795,596,591,571" href="27" />
+<area shape="poly" coords="591,575,793,600,778,675,749,731,564,624" href="28" />
+<area shape="poly" coords="814,609,854,611,908,566,999,628,995,679,932,760,798,684" href="29" />
+<area shape="poly" coords="796,695,927,767,867,849,745,776" href="30" />
+<area shape="poly" coords="644,679,558,807,650,869,749,736" href="31" />
+<area shape="poly" coords="744,783,861,853,823,910,730,913,677,876" href="32" />
+<area shape="poly" coords="561,630,641,676,555,801,482,749" href="33" />
+<area shape="poly" coords="476,751,405,704,480,563,505,454,599,465,587,567,554,627" href="34" />
+<area shape="poly" coords="256,593,321,492,331,437,414,444,405,514,330,639" href="36" />
+<area shape="poly" coords="140,422,325,437,317,493,253,591,119,514" href="37" />
+<area shape="poly" coords="1071,44,1208,47,1191,317,1049,306" href="23" />
+</map>
