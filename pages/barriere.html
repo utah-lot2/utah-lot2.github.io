@@ -1,28 +1,35 @@
 ---
 layout: normal-page
 title: "barriere"
-permalink: /barriere
+permalink: /info/barriere
 custom_js:
 - https://cdn.jsdelivr.net/npm/vue
 - https://cdn.jsdelivr.net/npm/node-forge@0.7.0/dist/forge.min.js
 - /assets/js/barriere.js
 ---
 <div id="cryptoapp">
-    <h4>Code bariere</h4>    
-    <form>
+    <h4>Donnez le mot de passe pour avoir access au code barrière</h4>    
+    <form id="form-barriere">
             <div class="form-group row">
-                <label for="sharedKey" class="col-sm-2 col-form-label">Shared key</label>
+                <label for="sharedKey" class="col-sm-2 col-form-label">Mot de passe</label>
                 <div class="col-sm-10">
-                    <input type="text" id="sharedKey" class="form-control" v-model="encryption_pwd" aria-describedby="sharedKeyHelp" placeholder="mos de pass">
-                    <small id="sharedKeyHelp" class="form-text text-muted">Password contue par les habitant</small>
+                    <input type="text" id="sharedKey" class="form-control" v-model="encryption_pwd" aria-describedby="sharedKeyHelp" placeholder="mos de passe" autofocus>
+                    <small id="sharedKeyHelp" class="form-text text-muted">Mot de passe connu par les propriétaires</small>
                 </div>
             </div>                            
             <div class="form-group row">
                 <div class="col-sm-10">
-                    <button type="button" class="btn btn-primary" v-on:click="decrypt">Decrypt</button>
+                    <button id="decryptButton" type="button" class="btn btn-primary" v-on:click="decrypt" v-bind:disabled="isDecryptionDisabled">Decrypt</button>
                 </div>
             </div>            
     </form>
-    Result: <br/>
-    <textarea rows="4" cols="100" v-model="code" ></textarea>
+
+    <div v-if="state === 'DECRYPT_OK'">
+        Mot de passe ok. Voice le code de la barrière: <br/>
+        <textarea rows="1" cols="50" v-model="code" ></textarea>
+    </div>
+
+    <div v-if="state === 'DECRYPT_NOK'" class="alert alert-danger" role="alert">
+        La décryption a échoué. Est-ce que vous êtes sure que le mot de passe et bon?
+    </div>    
 </div>

@@ -3,15 +3,18 @@ var app = new Vue({
     data: {
       code: "",
       encryption_iv: "",
-      encryption_pwd: "MYPASS",      
+      encryption_pwd: "",      
       code_encrypted:'',
-      salt:''
+      salt:'',
+      state:''
     },
     computed: {
+        isDecryptionDisabled: function() {
+            return this.encryption_pwd.length == 0;
+        }
     },    
     methods: {
         decrypt: function() {            
-            console.log("Decrypting "+forge.util.hexToBytes(this.code_encrypted));
             var numIterations = 20;
             var d_iv = forge.util.createBuffer();
             var d_data = forge.util.createBuffer();
@@ -25,12 +28,10 @@ var app = new Vue({
             decipher.start({iv: d_iv});
             decipher.update(d_data);
             var result = decipher.finish(); // check 'result' for true/false
-            console.log(result);
-            // outputs decrypted hex
-            console.log(decipher.output.toHex());
-            console.log(decipher.output);            
-            this.code = decipher.output.data;
-
+            this.state = result && decipher.output.data.length >0 ? 'DECRYPT_OK':'DECRYPT_NOK';
+            if (result) {
+                this.code = decipher.output.data;
+            }
         }
     },
     created: function() {
@@ -49,6 +50,15 @@ var app = new Vue({
             error: function(e) {
                 console.log(e.message);
             }
-        });            
+        });
     }
 })
+
+
+
+//this will stop the submit of the form
+$("#form-barriere").on('submit',function(e){            
+    e.preventDefault();
+    app.decrypt();
+});        
+

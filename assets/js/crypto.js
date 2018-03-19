@@ -1,10 +1,9 @@
 var app = new Vue({
     el: '#cryptoapp',
     data: {
-      message: 'Hello Vue!',
       code: "",
       encryption_iv: "",
-      encryption_pwd: "MYPASS",      
+      encryption_pwd: "",      
       code_encrypted:'',
       salt:''
 
@@ -42,6 +41,7 @@ var app = new Vue({
 
 
             //TEST DECIPHER
+            /*
             var d_iv = forge.util.createBuffer();
             var d_data = forge.util.createBuffer();
             d_iv.putBytes(forge.util.hexToBytes(this.encryption_iv));
@@ -57,6 +57,7 @@ var app = new Vue({
             // outputs decrypted hex
             console.log(decipher.output.toHex());
             console.log(decipher.output);            
+            */
         }
     }
 })
