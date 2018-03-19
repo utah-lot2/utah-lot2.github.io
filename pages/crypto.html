@@ -1,0 +1,38 @@
+---
+layout: normal-page
+title: "crypto"
+permalink: /crypto
+custom_js:
+- https://cdn.jsdelivr.net/npm/vue
+- https://cdn.jsdelivr.net/npm/node-forge@0.7.0/dist/forge.min.js
+- /assets/js/crypto.js
+---
+<div id="cryptoapp">
+    <h4>Encrypt a text with AES</h4>
+
+    <form>
+            <div class="form-group row">
+              <label for="clearText" class="col-sm-2 col-form-label">Text to encrypt</label>
+              <div class="col-sm-10">
+                <input type="text" id="clearText" class="form-control" v-model="code" aria-describedby="clearTextHelp" placeholder="">
+                <small id="clearTextHelp" class="form-text text-muted">Ex. new code barrière</small>
+              </div>
+            </div>
+            <div class="form-group row">
+                <label for="sharedKey" class="col-sm-2 col-form-label">Shared key</label>
+                <div class="col-sm-10">
+                    <input type="text" id="sharedKey" class="form-control" v-model="encryption_pwd" aria-describedby="sharedKeyHelp" placeholder="mos de pass">
+                    <small id="sharedKeyHelp" class="form-text text-muted">Password contue par les habitant</small>
+                </div>
+            </div>                            
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="button" class="btn btn-primary" v-on:click="encrypt">Encrypt</button>
+                </div>
+            </div>            
+    </form>
+    <div v-if="code_encrypted">
+    Result: <br/>
+    <textarea v-model="encrypted_json" rows="4" cols="100"></textarea>
+    </div>                
+</div>
