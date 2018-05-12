@@ -42,6 +42,7 @@ var app = new Vue({
             async: true,
             contentType: "application/json",
             dataType: 'json',
+            cache: 'false',
             success: function(json) {                
                 that.encryption_iv = json.iv;
                 that.code_encrypted = json.encrypted_text;
